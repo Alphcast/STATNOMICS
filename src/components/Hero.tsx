@@ -72,7 +72,7 @@ export function Hero() {
 
             {/* Stats row */}
             <div className="flex gap-6 md:gap-10 mt-10 flex-wrap fade-up">
-              {[['500+', 'Projects Done'], ['98%', 'Satisfaction Rate'], ['24/7', 'Support'], ['48h', 'Avg. Delivery']].map(([n, l]) => (
+              {[['500+', 'Projects Done'], ['98%', 'Satisfaction Rate'], ['24/7', 'Support'], ['Agreed', 'Timeline']].map(([n, l]) => (
                 <div key={l}>
                   <div className="font-syne font-extrabold text-xl md:text-2xl bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">
                     {n}
