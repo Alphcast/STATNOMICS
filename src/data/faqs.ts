@@ -4,7 +4,7 @@ export interface FAQ {
 }
 
 export const faqs: FAQ[] = [
-  { q: 'How quickly can I get my project completed?', a: 'Most standard projects are delivered within 48 hours. Rush options are available for 12–24 hour turnarounds depending on complexity. Express your urgency when reaching out.' },
+  { q: 'How quickly can I get my project completed?', a: 'Delivery timelines are based on mutual agreement. We discuss your deadlines during the initial consultation and tailor the schedule to fit your needs and the scope of work.' },
   { q: 'Is my information kept confidential?', a: 'Absolutely. We take your privacy seriously. All client information, project details, and deliverables are handled with strict confidentiality. We can sign NDAs on request.' },
   { q: 'What types of academic projects do you handle?', a: 'We cover everything from undergraduate assignments and term papers to PhD dissertations, research proposals, journal articles, systematic reviews, and academic consulting.' },
   { q: 'How do I make payment?', a: 'We accept bank transfers, mobile money (USSD), and online payments. Payment is typically split — 50% upfront and 50% on delivery. Contact us for a personalized quote.' },

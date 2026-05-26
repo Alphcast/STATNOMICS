@@ -163,14 +163,14 @@ export function Hero() {
               {/* Status */}
               <div className="mt-3 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-400 shadow-lg shadow-green-400/50 animate-pulse" />
-                <span className="text-white/30 text-xs">Expert team online • Avg. delivery 48h</span>
+                <span className="text-white/30 text-xs">Expert team online • Delivery based on agreement</span>
               </div>
             </div>
 
             {/* Floating badge */}
             <div className="glass absolute -bottom-4 -left-4 md:-left-8 px-4 py-2.5 rounded-xl flex items-center gap-2.5 shadow-lg shadow-accent-500/20 animate-float-delayed">
               <span className="text-lg">⚡</span>
-              <span className="text-white/70 text-xs font-medium whitespace-nowrap">Fast delivery guaranteed</span>
+              <span className="text-white/70 text-xs font-medium whitespace-nowrap">Flexible delivery timeline</span>
             </div>
 
             {/* Data stats cards */}

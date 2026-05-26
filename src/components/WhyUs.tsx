@@ -1,6 +1,6 @@
 const whyItems = [
   { icon: '🧠', title: 'Expert Team', desc: 'PhD-qualified researchers & writers across all academic and professional domains.', color: 'from-primary-500/30 to-primary-600/20' },
-  { icon: '⚡', title: 'Fast Delivery', desc: '48-hour turnaround on most projects. Rush options available for urgent deadlines.', color: 'from-accent-500/30 to-cyan-600/20' },
+  { icon: '⚡', title: 'Timely Delivery', desc: 'Delivery timelines tailored to your schedule based on mutual agreement — no rigid deadlines.', color: 'from-accent-500/30 to-cyan-600/20' },
   { icon: '💰', title: 'Affordable Pricing', desc: 'Transparent, fair pricing with no hidden fees. Student-friendly rates available.', color: 'from-emerald-500/30 to-green-600/20' },
   { icon: '🔒', title: '100% Confidential', desc: 'Your data stays private. NDA signing available on request for sensitive projects.', color: 'from-fuchsia-500/30 to-pink-600/20' },
   { icon: '👨‍🔬', title: 'Human Expertise', desc: 'Every project is handled by skilled professionals — real people, real qualifications, no automation.', color: 'from-amber-500/30 to-orange-600/20' },
