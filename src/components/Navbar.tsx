@@ -12,8 +12,9 @@ export function Navbar({ dark, toggle }: NavbarProps) {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 flex items-center justify-between bg-[#0f0c29]/80 backdrop-blur-xl border-b border-white/10">
-      <a href="#home" className="font-syne font-extrabold text-xl bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent tracking-tight">
-        <span className="mr-1">✦</span> STATNOMICS
+      <a href="#home" className="flex items-center gap-2 font-syne font-extrabold text-xl tracking-tight">
+        <img src="/stat.png" alt="STATNOMICS" className="h-9 w-9 rounded-full border-2 border-white object-cover" />
+        <span className="bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">STATNOMICS</span>
       </a>
 
       <ul className="hidden md:flex items-center gap-8 list-none">

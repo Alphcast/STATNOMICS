@@ -17,8 +17,9 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <a href="#home" className="font-syne font-extrabold text-xl bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent tracking-tight mb-4 inline-block">
-              <span className="mr-1">✦</span> STATNOMICS
+            <a href="#home" className="flex items-center gap-2 font-syne font-extrabold text-xl bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent tracking-tight mb-4">
+              <img src="/stat.png" alt="STATNOMICS" className="h-9 w-9 rounded-full border-2 border-white object-cover" />
+              STATNOMICS
             </a>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs mt-3">
               Empowering students, researchers, and businesses with expert-driven research,

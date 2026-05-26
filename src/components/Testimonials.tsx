@@ -25,9 +25,12 @@ export function Testimonials() {
               </div>
               <p className="text-white/60 text-sm leading-relaxed mb-4 italic">"{t.quote}"</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                  {t.init}
-                </div>
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  className="w-10 h-10 rounded-full object-cover flex-shrink-0 border-2 border-white/10"
+                  loading="lazy"
+                />
                 <div>
                   <div className="text-white text-sm font-semibold">{t.name}</div>
                   <div className="text-white/30 text-xs">{t.role}</div>

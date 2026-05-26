@@ -4,28 +4,72 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg-primary: #0f0c29;
+    --bg-secondary: #1a1040;
+    --bg-tertiary: #0f1929;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255,255,255,0.55);
+    --text-muted: rgba(255,255,255,0.3);
+    --border-color: rgba(255,255,255,0.10);
+    --glass-bg: rgba(255,255,255,0.05);
+    --hover-bg: rgba(255,255,255,0.08);
+    --nav-bg: rgba(15,12,41,0.80);
+    --section-alt: rgba(255,255,255,0.02);
+    --scrollbar-track: #1a1040;
+    --gradient-from: #0f0c29;
+    --input-bg: rgba(255,255,255,0.05);
+    --select-bg: #1a1040;
+    --star-color: #FFD700;
+  }
+
+  :root.light {
+    --bg-primary: #f4f6f9;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #eef0f5;
+    --text-primary: #1a1a2e;
+    --text-secondary: rgba(26,26,46,0.55);
+    --text-muted: rgba(26,26,46,0.30);
+    --border-color: rgba(0,0,0,0.08);
+    --glass-bg: rgba(255,255,255,0.75);
+    --hover-bg: rgba(108,99,255,0.08);
+    --nav-bg: rgba(255,255,255,0.85);
+    --section-alt: rgba(0,0,0,0.02);
+    --scrollbar-track: #e0e0e0;
+    --gradient-from: #ffffff;
+    --input-bg: rgba(0,0,0,0.03);
+    --select-bg: #ffffff;
+    --star-color: #F59E0B;
+  }
+
   * { @apply m-0 p-0 box-border; }
   html { scroll-behavior: smooth; }
   body {
-    @apply font-dm text-white overflow-x-hidden;
-    background: linear-gradient(135deg, #0f0c29, #1a1040, #0f1929);
+    @apply font-dm overflow-x-hidden;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary), var(--bg-tertiary));
     background-attachment: fixed;
     min-height: 100vh;
+    transition: color 0.3s ease, background 0.3s ease;
   }
   ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-track { background: #1a1040; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
   ::-webkit-scrollbar-thumb { background: #6C63FF; border-radius: 10px; }
 }
 
 @layer components {
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+    @apply backdrop-blur-xl rounded-2xl;
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    transition: background 0.3s ease, border-color 0.3s ease;
   }
   .glass-hover {
     @apply glass transition-all duration-300;
   }
   .glass-hover:hover {
-    @apply border-primary-500/40 bg-white/10;
+    border-color: rgba(108,99,255,0.4);
+    background: var(--hover-bg);
   }
   .btn-primary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-white
@@ -36,9 +80,15 @@
   }
   .btn-outline {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm
-           bg-white/5 backdrop-blur-xl border border-white/10 text-white/80
-           hover:border-primary-500/40 hover:bg-primary-500/10 hover:text-white
-           transition-all duration-200;
+           backdrop-blur-xl transition-all duration-200;
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+  }
+  .btn-outline:hover {
+    border-color: rgba(108,99,255,0.4);
+    background: rgba(108,99,255,0.1);
+    color: var(--text-primary);
   }
   .btn-wa {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-white
@@ -63,8 +113,15 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  :root.light .section-title {
+    background: linear-gradient(135deg, #1a1a2e 40%, #6C63FF 70%, #00D1FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
   .section-sub {
-    @apply text-white/60 text-base leading-relaxed max-w-lg;
+    color: var(--text-secondary);
+    @apply text-base leading-relaxed max-w-lg;
   }
   .stat-num {
     @apply font-syne font-extrabold text-4xl;
@@ -94,6 +151,14 @@
     transform: translate(-50%, -50%);
     transition: transform 0.18s ease, width 0.2s, height 0.2s, opacity 0.3s;
   }
+
+  /* Toast / alert */
+  .toast-success {
+    @apply border rounded-xl px-4 py-3 text-sm flex items-center gap-2;
+    background: rgba(16,185,129,0.15);
+    border-color: rgba(16,185,129,0.3);
+    color: #10B981;
+  }
 }
 
 @layer utilities {
@@ -109,4 +174,54 @@
       linear-gradient(to right, rgba(108,99,255,0.05) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(108,99,255,0.05) 1px, transparent 1px);
   }
+}
+
+/* ===== LIGHT MODE OVERRIDES ===== */
+
+/* Text colors */
+:root.light .text-white { color: var(--text-primary) !important; }
+:root.light .text-white\/80,
+:root.light .text-white\/70 { color: var(--text-primary) !important; }
+:root.light .text-white\/60,
+:root.light .text-white\/50 { color: var(--text-secondary) !important; }
+:root.light .text-white\/40,
+:root.light .text-white\/30,
+:root.light .text-white\/20,
+:root.light .text-white\/10 { color: var(--text-muted) !important; }
+
+/* Backgrounds */
+:root.light .bg-white\/5 { background: var(--glass-bg) !important; }
+:root.light .bg-white\/10 { background: var(--hover-bg) !important; }
+:root.light [class*="bg-white/[0.02]"] { background: var(--section-alt) !important; }
+:root.light [class*="bg-[#0f0c29]"] { background: var(--nav-bg) !important; }
+:root.light [class*="bg-[#1a1040]"] { background: var(--select-bg) !important; }
+:root.light select option { background: var(--select-bg); color: var(--text-primary); }
+
+/* Borders */
+:root.light .border-white\/10,
+:root.light .border-white\/5 { border-color: var(--border-color) !important; }
+:root.light .border-t-white\/10 { border-top-color: var(--border-color) !important; }
+
+/* Gradient overlays (chart fade backgrounds) */
+:root.light [class*="from-[#0f0c29]"] {
+  --tw-gradient-from: var(--gradient-from) var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position) !important;
+}
+
+/* Input fields */
+:root.light input,
+:root.light textarea,
+:root.light select {
+  background: var(--input-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+:root.light input::placeholder,
+:root.light textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Hero heading gradient */
+:root.light [class*="from-white"] {
+  --tw-gradient-from: var(--text-primary) !important;
 }

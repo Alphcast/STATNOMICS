@@ -14,64 +14,63 @@ export function Services() {
           </p>
         </div>
 
-        {/* Image showcase for analysis */}
+        {/* Image showcase — real tool interfaces */}
         <div className="grid md:grid-cols-3 gap-3 mb-12 fade-up">
-          <div className="glass rounded-2xl overflow-hidden group cursor-pointer">
-            <div className="aspect-[16/9] bg-gradient-to-br from-primary-500/20 to-purple-600/20 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-grid opacity-30" />
-              <svg viewBox="0 0 200 120" className="w-4/5 h-auto relative z-10">
-                <rect x="10" y="80" width="25" height="30" rx="3" fill="#6C63FF" opacity="0.8" />
-                <rect x="45" y="55" width="25" height="55" rx="3" fill="#6C63FF" opacity="0.9" />
-                <rect x="80" y="40" width="25" height="70" rx="3" fill="#00D1FF" opacity="0.8" />
-                <rect x="115" y="20" width="25" height="90" rx="3" fill="#6C63FF" />
-                <rect x="150" y="60" width="25" height="50" rx="3" fill="#A78BFA" opacity="0.8" />
-                <line x1="8" y1="105" x2="195" y2="105" stroke="white" strokeOpacity="0.2" strokeWidth="1" />
-              </svg>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f0c29] via-transparent to-transparent" />
+          {[
+            {
+              src: 'https://images.unsplash.com/photo-1762558978967-709b17a00415?w=600&auto=format',
+              title: 'Excel & Spreadsheet Mastery',
+              sub: 'Financial modeling · Data entry · Dashboards',
+              gradient: 'from-primary-500/20 to-purple-600/20',
+            },
+            {
+              src: 'https://images.unsplash.com/photo-1686061593213-98dad7c599b9?w=600&auto=format',
+              title: 'PowerBI Dashboard Design',
+              sub: 'KPI tracking · Sales analytics · Executive reporting',
+              gradient: 'from-accent-500/20 to-teal-600/20',
+            },
+            {
+              src: 'https://upload.wikimedia.org/wikipedia/commons/d/d4/Mixed-Design_ANOVA_Example.png',
+              title: 'SPSS Statistical Modeling',
+              sub: 'ANOVA · Regression · Survey analysis · T-tests',
+              gradient: 'from-fuchsia-500/20 to-pink-600/20',
+            },
+            {
+              src: 'https://upload.wikimedia.org/wikipedia/commons/3/38/Screenshot-knitr-RStudio.png',
+              title: 'R Programming & Analysis',
+              sub: 'RStudio · Knitr · tidyverse · Statistical computing',
+              gradient: 'from-primary-500/20 to-accent-500/20',
+            },
+            {
+              src: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Screen-python-code-matplotlib-physics-simulation.jpg',
+              title: 'Python Data Science',
+              sub: 'Jupyter · Pandas · Matplotlib · Machine learning',
+              gradient: 'from-emerald-500/20 to-teal-600/20',
+            },
+            {
+              src: 'https://images.unsplash.com/photo-1762279389020-eeeb69c25813?w=600&auto=format',
+              title: 'Charts & Data Visualization',
+              sub: 'Interactive plots · Infographics · Report-ready graphs',
+              gradient: 'from-amber-500/20 to-orange-600/20',
+            },
+          ].map(item => (
+            <div key={item.title} className="glass rounded-2xl overflow-hidden group cursor-pointer">
+              <div className={`aspect-[16/9] bg-gradient-to-br ${item.gradient} flex items-center justify-center relative overflow-hidden`}>
+                <div className="absolute inset-0 bg-grid opacity-30" />
+                <img
+                  src={item.src}
+                  alt={item.title}
+                  className="w-full h-full object-cover relative z-10 group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f0c29] via-transparent to-transparent" />
+              </div>
+              <div className="p-4">
+                <div className="text-white/70 text-sm font-semibold">{item.title}</div>
+                <div className="text-white/30 text-xs mt-1">{item.sub}</div>
+              </div>
             </div>
-            <div className="p-4">
-              <div className="text-white/70 text-sm font-semibold">Statistical Analysis & Visualization</div>
-              <div className="text-white/30 text-xs mt-1">SPSS · R · Python · STATA · Excel</div>
-            </div>
-          </div>
-          <div className="glass rounded-2xl overflow-hidden group cursor-pointer">
-            <div className="aspect-[16/9] bg-gradient-to-br from-accent-500/20 to-teal-600/20 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-grid opacity-30" />
-              <svg viewBox="0 0 200 120" className="w-4/5 h-auto relative z-10">
-                <circle cx="60" cy="55" r="25" fill="none" stroke="#00D1FF" strokeWidth="2" opacity="0.6" />
-                <circle cx="120" cy="50" r="35" fill="none" stroke="#6C63FF" strokeWidth="2" opacity="0.6" />
-                <circle cx="90" cy="65" r="18" fill="#6C63FF" opacity="0.3" />
-                <circle cx="50" cy="50" r="4" fill="#00D1FF" />
-                <circle cx="130" cy="45" r="4" fill="#6C63FF" />
-                <circle cx="85" cy="40" r="3" fill="#A78BFA" />
-                <circle cx="110" cy="70" r="3" fill="#F472B6" />
-              </svg>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f0c29] via-transparent to-transparent" />
-            </div>
-            <div className="p-4">
-              <div className="text-white/70 text-sm font-semibold">Cluster & Regression Analysis</div>
-              <div className="text-white/30 text-xs mt-1">Advanced quantitative methods</div>
-            </div>
-          </div>
-          <div className="glass rounded-2xl overflow-hidden group cursor-pointer">
-            <div className="aspect-[16/9] bg-gradient-to-br from-fuchsia-500/20 to-pink-600/20 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-grid opacity-30" />
-              <svg viewBox="0 0 200 120" className="w-4/5 h-auto relative z-10">
-                <path d="M20 100 L40 70 L60 80 L80 45 L100 55 L120 25 L140 40 L160 30 L180 35"
-                      fill="none" stroke="#A78BFA" strokeWidth="2" />
-                <path d="M20 100 L40 90 L60 95 L80 70 L100 80 L120 55 L140 65 L160 50 L180 60"
-                      fill="none" stroke="#00D1FF" strokeWidth="2" opacity="0.6" />
-                {[20, 40, 60, 80, 100, 120, 140, 160, 180].map((x, i) => (
-                  <circle key={i} cx={x} cy={[100, 70, 80, 45, 55, 25, 40, 30, 35][i]} r="3" fill="#A78BFA" />
-                ))}
-              </svg>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f0c29] via-transparent to-transparent" />
-            </div>
-            <div className="p-4">
-              <div className="text-white/70 text-sm font-semibold">Trend Analysis & Forecasting</div>
-              <div className="text-white/30 text-xs mt-1">Time series & predictive modeling</div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Service cards */}
