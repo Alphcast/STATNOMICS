@@ -4,7 +4,7 @@ const stats = [
   { target: 500, suffix: '+', label: 'Projects Completed', icon: '📁' },
   { target: 98, suffix: '%', label: 'Satisfaction Rate', icon: '⭐' },
   { target: 24, suffix: '/7', label: 'Support Available', icon: '🕐' },
-  { target: 48, suffix: 'h', label: 'Avg. Delivery Time', icon: '🚀' },
+  { target: 100, suffix: '%', label: 'On Agreement', icon: '🤝' },
 ];
 
 export function Stats() {
