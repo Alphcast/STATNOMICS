@@ -10,6 +10,7 @@ export default {
       fontFamily: {
         syne: ['Syne', 'sans-serif'],
         dm: ['DM Sans', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
         primary: {

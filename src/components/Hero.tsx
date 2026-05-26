@@ -32,13 +32,24 @@ export function Hero() {
           {/* Left: Text */}
           <div>
             <div className="section-label fade-up">🚀 Premium Research Platform</div>
-            <h1 className="font-syne font-extrabold leading-tight mb-6 fade-up"
+            <h1 className="font-poppins font-extrabold leading-tight mb-6 fade-up"
                 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', letterSpacing: '-2px' }}>
               <span className="bg-gradient-to-r from-white via-primary-300 to-accent-400 bg-clip-text text-transparent">
-                Research, Analysis
+                Research Assistance,
               </span>
               <br />
               <span className="bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent">
+                Data Analysis,
+              </span>
+              <br />
+              <span style={{
+                background: 'linear-gradient(135deg, #6C63FF, #00D1FF)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                WebkitTextStroke: '1.5px rgba(108,99,255,0.3)',
+                paintOrder: 'stroke fill',
+              }}>
                 Proposals &amp; More
               </span>
             </h1>

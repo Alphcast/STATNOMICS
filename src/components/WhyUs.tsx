@@ -3,7 +3,7 @@ const whyItems = [
   { icon: '⚡', title: 'Fast Delivery', desc: '48-hour turnaround on most projects. Rush options available for urgent deadlines.', color: 'from-accent-500/30 to-cyan-600/20' },
   { icon: '💰', title: 'Affordable Pricing', desc: 'Transparent, fair pricing with no hidden fees. Student-friendly rates available.', color: 'from-emerald-500/30 to-green-600/20' },
   { icon: '🔒', title: '100% Confidential', desc: 'Your data stays private. NDA signing available on request for sensitive projects.', color: 'from-fuchsia-500/30 to-pink-600/20' },
-  { icon: '📊', title: 'AI + Human Expertise', desc: 'Best-in-class tools combined with expert human oversight for superior results.', color: 'from-amber-500/30 to-orange-600/20' },
+  { icon: '👨‍🔬', title: 'Human Expertise', desc: 'Every project is handled by skilled professionals — real people, real qualifications, no automation.', color: 'from-amber-500/30 to-orange-600/20' },
   { icon: '🔄', title: 'Unlimited Revisions', desc: 'We revise until you are satisfied — no extra charges, no questions asked.', color: 'from-primary-500/30 to-accent-500/20' },
 ];
 
@@ -16,8 +16,9 @@ export function WhyUs() {
             <div className="section-label fade-left">Why STATNOMICS</div>
             <h2 className="section-title fade-left">Expertise You Can Trust.<br />Speed You Can Count On.</h2>
             <p className="text-white/50 text-base leading-relaxed mt-4 max-w-md fade-left">
-              We blend human expertise with AI-assisted research workflows to deliver work that is
-              faster, smarter, and more accurate than traditional academic support services.
+              We are a team of dedicated human researchers, analysts, and writers committed to
+              delivering top-quality academic and professional work — powered by experience,
+              not automation.
             </p>
 
             {/* Image of people analyzing */}
