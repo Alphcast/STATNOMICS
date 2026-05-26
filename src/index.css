@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply m-0 p-0 box-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply font-dm text-white overflow-x-hidden;
+    background: linear-gradient(135deg, #0f0c29, #1a1040, #0f1929);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #1a1040; }
+  ::-webkit-scrollbar-thumb { background: #6C63FF; border-radius: 10px; }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+  .glass-hover {
+    @apply glass transition-all duration-300;
+  }
+  .glass-hover:hover {
+    @apply border-primary-500/40 bg-white/10;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-white
+           bg-gradient-to-r from-primary-500 to-purple-500
+           shadow-lg shadow-primary-500/30
+           hover:shadow-xl hover:shadow-primary-500/40 hover:-translate-y-0.5
+           active:scale-95 transition-all duration-200;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm
+           bg-white/5 backdrop-blur-xl border border-white/10 text-white/80
+           hover:border-primary-500/40 hover:bg-primary-500/10 hover:text-white
+           transition-all duration-200;
+  }
+  .btn-wa {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm text-white
+           bg-gradient-to-r from-green-500 to-emerald-600
+           shadow-lg shadow-green-500/30
+           hover:shadow-xl hover:shadow-green-500/40 hover:-translate-y-0.5
+           active:scale-95 transition-all duration-200;
+  }
+  .section-label {
+    @apply text-xs font-medium tracking-widest uppercase text-primary-500 mb-3 flex items-center gap-2;
+  }
+  .section-label::before {
+    content: '';
+    @apply w-6 h-0.5 bg-primary-500 inline-block;
+  }
+  .section-title {
+    @apply font-syne font-extrabold leading-tight;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #fff 40%, #6C63FF 70%, #00D1FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .section-sub {
+    @apply text-white/60 text-base leading-relaxed max-w-lg;
+  }
+  .stat-num {
+    @apply font-syne font-extrabold text-4xl;
+    background: linear-gradient(135deg, #6C63FF, #00D1FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Scroll progress bar */
+  #scroll-progress {
+    @apply fixed top-0 left-0 h-1 z-[9999];
+    background: linear-gradient(90deg, #6C63FF, #00D1FF);
+    transition: width 0.1s linear;
+  }
+
+  /* Custom cursor */
+  #cursor-dot {
+    @apply fixed pointer-events-none z-[9999] w-2.5 h-2.5 rounded-full;
+    background: #6C63FF;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s, opacity 0.2s;
+  }
+  #cursor-ring {
+    @apply fixed pointer-events-none z-[9998] w-9 h-9 rounded-full;
+    border: 1.5px solid rgba(108, 99, 255, 0.6);
+    transform: translate(-50%, -50%);
+    transition: transform 0.18s ease, width 0.2s, height 0.2s, opacity 0.3s;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #6C63FF, #00D1FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(108,99,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(108,99,255,0.05) 1px, transparent 1px);
+  }
+}
